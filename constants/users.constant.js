@@ -1,0 +1,40 @@
+const TYPES = {
+    FACEBOOK: "facebook",
+    EMAIL: "email",
+    PHONE: "phone",
+    NORMAL: "normal"
+}
+
+const STATUS = {
+    INACTIVE: 0,
+    ACTIVE: 1,
+    VERIFIED: 2
+}
+
+const ROLES = {
+    ADMIN: 1,
+    NORMAL: 2
+}
+
+const GENDER = {
+    MALE: 1,
+    FEMALE: 2
+}
+
+const ERROR_CODES = {
+    USER_NOT_FOUND: "USER_NOT_FOUND",
+    PASSWORD_CONFIRM_NOT_MATCH: "PASSWORD_CONFIRM_NOT_MATCH",
+    EMAIL_ALREADY_EXISTS: "EMAIL_ALREADY_EXISTS",
+    PHONE_ALREADY_EXISTS: "PHONE_ALREADY_EXISTS",
+    USERNAME_ALREADY_EXISTS: "USERNAME_ALREADY_EXISTS",
+    PASSWORD_INVALID: "PASSWORD_INVALID",
+    EMAIL_IS_REQUIRED: "EMAIL_IS_REQUIRED"
+}
+
+module.exports = {
+    TYPES,
+    STATUS,
+    ERROR_CODES,
+    ROLES,
+    GENDER
+}

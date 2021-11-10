@@ -1,0 +1,50 @@
+{
+    "name": "nodejs-source",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "lint:fix": "eslint --fix --ext js,jsx,ts,tsx ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/techvisionus/nodejs-source.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/techvisionus/nodejs-source/issues"
+    },
+    "homepage": "https://github.com/techvisionus/nodejs-source#readme",
+    "dependencies": {
+        "ajv": "^8.7.1",
+        "ajv-bsontype": "^1.0.7",
+        "ajv-errors": "^3.0.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-async-errors": "^3.1.1",
+        "express-mung": "^0.5.1",
+        "http-errors": "^1.8.0",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.21",
+        "mongoose": "^6.0.12",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.26.1",
+        "eslint-plugin-react-hooks": "^1.7.0",
+        "nodemon": "^2.0.14",
+        "prettier": "^2.4.1"
+    }
+}

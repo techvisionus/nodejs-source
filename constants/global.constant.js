@@ -1,0 +1,13 @@
+const ERROR_CODES = {
+    UNAUTHORIZED: "UNAUTHORIZED",
+    TOKEN_INVALID: "TOKEN_INVALID"
+}
+
+const SKIP_DEFAULT = 0
+const LIMIT_DEFAULT = 100
+
+module.exports = {
+    ERROR_CODES,
+    SKIP_DEFAULT,
+    LIMIT_DEFAULT
+}
