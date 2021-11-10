@@ -4,7 +4,5 @@ module.exports = {
     MONGO_PORT: process.env.MONGO_PORT || "27017",
     MONGO_USER: process.env.MONGO_USER || "techvisionus",
     MONGO_PASSWORD: process.env.MONGO_PASSWORD || "techvisionus",
-    MONGO_DB:
-        process.env.DB_URL ||
-        "mongodb+srv://techvisionus:techvisionus@cluster0.7jwkj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    MONGO_DB: process.env.DB_URL || "your_mongodb"
 }
