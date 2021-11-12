@@ -16,7 +16,7 @@ app.use(require("./middlewares/redact"))
 app.use(require("./middlewares/normalize-mongoose"))
 
 app.enable("trust proxy")
-app.use(ResponseMiddleware.handlePagging)
+app.use(ResponseMiddleware.handlePaging)
 app.use("/api/v1", routesV1)
 app.use(HandlerErrorMiddleware.errorMiddleware)
 
