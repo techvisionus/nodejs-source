@@ -1,3 +1,4 @@
+require("dotenv").config()
 const winston = require("winston")
 const DailyRotateFile = require("winston-daily-rotate-file")
 const path = require("path")
@@ -15,11 +16,11 @@ const transport = new DailyRotateFile({
     format: winston.format.combine(winston.format.json(), winston.format.splat()) /*  */,
     filename: "application-%DATE%.log",
     datePattern: "YYYY-MM-DD-HH",
-    zippedArchive: true,
     maxSize: "20m",
     maxFiles: "14d",
     dirname: "./var/log" /* change thành /var/log khi build trên server linux */,
-    stderrLevels: ["error", "warning", "info"]
+    stderrLevels: ["error", "warning", "info"],
+    silent: process.env.NODE_ENV !== "production" /* Only write log on production */
 })
 
 const logFormat = winston.format.printf(info => {
