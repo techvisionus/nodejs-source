@@ -1,5 +1,6 @@
 const app = require("./app")
 const configs = require("./configs")
+require("./global")
 
 const server = app.listen(configs.PORT, () => {
     console.log(`🚀 Running on port ${configs.PORT}`)

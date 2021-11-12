@@ -1,6 +1,7 @@
 FROM node:14.13.0
 # Create app directory
 WORKDIR /app
+VOLUME [ "./logs" ]
 # Install app dependencies
 COPY package*.json ./
 ENV PORT 3000
