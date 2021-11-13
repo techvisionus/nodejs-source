@@ -17,6 +17,11 @@ app.use(require("./middlewares/normalize-mongoose"))
 
 app.enable("trust proxy")
 app.use(ResponseMiddleware.handlePaging)
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "Welcome to Techvisionus source !!"
+    })
+})
 app.use("/api/v1", routesV1)
 app.use(HandlerErrorMiddleware.errorMiddleware)
 
