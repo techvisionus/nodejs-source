@@ -1,9 +1,9 @@
 FROM node:14.13.0
 # Create app directory
 WORKDIR /app
-VOLUME [ "./logs" ]
 # Install app dependencies
 COPY package*.json ./
+
 ENV PORT 3000
 RUN npm install
 
@@ -15,7 +15,10 @@ RUN if [ "$NODE_ENV" = "development" ]; \
 
 # Copy app source code
 COPY . ./
+
 #Expose port and start application
 EXPOSE ${PORT}
+# RUN adduser --disabled-login -u 501 appuser --gid 20
+# RUN chown -R appuser:20 /app
 
 CMD npm run start
