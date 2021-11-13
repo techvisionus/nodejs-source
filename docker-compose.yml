@@ -1,0 +1,42 @@
+version: "3.4"
+
+services:
+    node-server:
+        build:
+            context: .
+            args:
+                NODE_ENV: production
+        container_name: node-server
+        ports:
+            - "3000:3000"
+        environment:
+            - NODE_ENV=production
+            - MONGO_USER=${MONGO_USER}
+            - MONGO_PASSWORD=${MONGO_PASSWORD}
+        command: node index.js
+        volumes:
+            - ./logs:/var/log
+        networks:
+            - node-techvisionus-network
+        depends_on:
+            - mongodb
+        restart: always
+    mongodb:
+        image: mongo:4.2
+        ports:
+            - "27017:27017"
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+        volumes:
+            - mongodb-data:/data/db
+        networks:
+            - node-techvisionus-network
+        restart: always
+volumes:
+    mongodb-data:
+    logs:
+
+networks:
+    node-techvisionus-network:
+        name: node-techvisionus-network
